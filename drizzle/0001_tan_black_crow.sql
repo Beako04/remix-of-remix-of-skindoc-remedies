@@ -1,0 +1,22 @@
+CREATE TABLE `skin_analysis` (
+	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`user_id` text NOT NULL,
+	`skin_type` text,
+	`concerns` text,
+	`lifestyle_sun_exposure` text,
+	`lifestyle_stress_level` text,
+	`lifestyle_diet_quality` text,
+	`lifestyle_sleep_quality` text,
+	`lifestyle_exercise_frequency` text,
+	`current_products` text,
+	`goals` text,
+	`preferences_budget` text,
+	`preferences_product_types` text,
+	`preferences_sensitivity` text,
+	`analysis_method` text,
+	`skin_score` integer,
+	`analysis_results` text,
+	`created_at` text NOT NULL,
+	`updated_at` text NOT NULL,
+	FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE no action ON DELETE cascade
+);
